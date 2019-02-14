@@ -1,7 +1,7 @@
 import React from 'react';
 import ShopItems from '../shopItems';
 
-const CoffeePage = ({pageType}) => {
+const CoffeePage = () => {
 
     const beans = {
         title: 'About our beans',

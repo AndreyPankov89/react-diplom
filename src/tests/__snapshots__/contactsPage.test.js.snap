@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <ContactsPage/> testing shap & state  ContactsPage have rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ContactsPage />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="row"
+      >
+        <div
+          className="col-lg-4 offset-lg-4"
+        >
+          <div
+            className="title"
+          >
+            Tell us about your tastes
+          </div>
+          <img
+            alt="Beans logo"
+            className="beanslogo"
+            src="/logo/Beans_logo_dark.svg"
+          />
+        </div>
+        <ContactForm
+          err={null}
+          onClick={[Function]}
+          onValueChange={[Function]}
+        />
+      </div>,
+      "className": "container",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="col-lg-4 offset-lg-4"
+          >
+            <div
+              className="title"
+            >
+              Tell us about your tastes
+            </div>
+            <img
+              alt="Beans logo"
+              className="beanslogo"
+              src="/logo/Beans_logo_dark.svg"
+            />
+          </div>,
+          <ContactForm
+            err={null}
+            onClick={[Function]}
+            onValueChange={[Function]}
+          />,
+        ],
+        "className": "row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="title"
+              >
+                Tell us about your tastes
+              </div>,
+              <img
+                alt="Beans logo"
+                className="beanslogo"
+                src="/logo/Beans_logo_dark.svg"
+              />,
+            ],
+            "className": "col-lg-4 offset-lg-4",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Tell us about your tastes",
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": "Tell us about your tastes",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Beans logo",
+                "className": "beanslogo",
+                "src": "/logo/Beans_logo_dark.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "err": null,
+            "onClick": [Function],
+            "onValueChange": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="row"
+        >
+          <div
+            className="col-lg-4 offset-lg-4"
+          >
+            <div
+              className="title"
+            >
+              Tell us about your tastes
+            </div>
+            <img
+              alt="Beans logo"
+              className="beanslogo"
+              src="/logo/Beans_logo_dark.svg"
+            />
+          </div>
+          <ContactForm
+            err={null}
+            onClick={[Function]}
+            onValueChange={[Function]}
+          />
+        </div>,
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-lg-4 offset-lg-4"
+            >
+              <div
+                className="title"
+              >
+                Tell us about your tastes
+              </div>
+              <img
+                alt="Beans logo"
+                className="beanslogo"
+                src="/logo/Beans_logo_dark.svg"
+              />
+            </div>,
+            <ContactForm
+              err={null}
+              onClick={[Function]}
+              onValueChange={[Function]}
+            />,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="title"
+                >
+                  Tell us about your tastes
+                </div>,
+                <img
+                  alt="Beans logo"
+                  className="beanslogo"
+                  src="/logo/Beans_logo_dark.svg"
+                />,
+              ],
+              "className": "col-lg-4 offset-lg-4",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Tell us about your tastes",
+                  "className": "title",
+                },
+                "ref": null,
+                "rendered": "Tell us about your tastes",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Beans logo",
+                  "className": "beanslogo",
+                  "src": "/logo/Beans_logo_dark.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "err": null,
+              "onClick": [Function],
+              "onValueChange": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

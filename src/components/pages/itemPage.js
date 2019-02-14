@@ -12,6 +12,13 @@ class ItemPage extends Component{
         error: false
     }
 
+    componentDidCatch(){
+        this.setState({
+            error: true,
+            errorCode:"fatal"
+        })
+    }
+
     componentDidMount(){
         this.loadItems()
     }
@@ -34,7 +41,6 @@ class ItemPage extends Component{
         }
 
        coffee = {...coffee, short}
-        console.log(coffee)
         this.setState({coffee})
         this.setState({loading: false});
     }
@@ -50,7 +56,7 @@ class ItemPage extends Component{
     onSpoilClick = () => {
         this.setState({short: false})
     }
-
+ 
     render(){
 
         const {loading, error, errorCode, coffee}=this.state;

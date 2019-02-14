@@ -8,8 +8,15 @@ class BestItems extends Component{
     
     state={
         best:[], 
-        loading: false,
+        loading: true,
         error: false
+    }
+
+    componentDidCatch(){
+        this.setState({
+            error: true,
+            errorCode:"fatal"
+        })
     }
 
     componentDidMount(){
@@ -17,7 +24,7 @@ class BestItems extends Component{
     }
 
     loadItems = async () => {
-        this.setState({loading: true});
+        //this.setState({loading: true});
         const best = await fetch('/db.json')
             .then(res => res.json())
             .then(res => res.bestsellers)

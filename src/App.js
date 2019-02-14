@@ -5,11 +5,29 @@ import CoffeePage from './components/pages/coffeePage';
 import ContactsPage from './components/pages/contactsPage';
 import PleasurePage from './components/pages/pleasurePage';
 import Page from './components/pages/page';
+import ErrorMessage from './components/errorMessage/'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 class App extends Component {
+  state = {
+    error: false
+  }
+  componentDidCatch(){
+      this.setState({
+          error: true,
+          errorCode:"fatal"
+      })
+  }
+
   render() {
+    if (this.state.error){
+      return (
+        <div className="col-lg-6 offset-3">                    
+          <ErrorMessage code={this.state.errorCode}/>
+        </div>
+      )
+    }
     return (
       <Router>
         <Switch>

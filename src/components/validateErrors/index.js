@@ -1,2 +1,2 @@
-import ValidateErrors from './valedateErrors'
+import ValidateErrors from './validateErrors'
 export default ValidateErrors

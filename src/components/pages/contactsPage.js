@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import InputMask from 'react-input-mask';
 import ValidateErrors from '../validateErrors';
 import Spinner from '../spinner';
-
+import ErrorMessage from '../errorMessage/'
 
 //страница с формой обратной связи
 class ContactsPage extends Component{
@@ -14,7 +14,15 @@ class ContactsPage extends Component{
         message: "",
         validateErrors: [],
         loading:false,
-        thanks:false
+        thanks:false,
+        error: false
+    }
+
+    componentDidCatch(){
+        this.setState({
+            error: true,
+            errorCode:"fatal"
+        })
     }
 
     //сохраняем значения полей в state
@@ -76,11 +84,11 @@ class ContactsPage extends Component{
         post.json()
         .then(()=>{console.log('ok')})
         .catch((error) =>{
-            console.log('request failed ', error)
+           this.setState({  error: true, errorCode:error.message})
         })
     }
 
-    onClick = () => {
+    onClick = async () => {
         
         const isValid = this.validateForm();//проверяем корректность данных
         //если данные корректны, постим.
@@ -88,7 +96,7 @@ class ContactsPage extends Component{
             this.setState({loading:true});
             const {name,email,phone,message} = this.state;
             const data = {name,email,phone,message};
-            this.postData(data);
+            await this.postData(data);
             this.setState({loading:false});
             this.setState({thanks: true});
         }
@@ -100,6 +108,14 @@ class ContactsPage extends Component{
     }
     
     render(){
+        if (this.state.error){
+            return (
+                <div className="col-lg-6 offset-3">                    
+                    <ErrorMessage code={this.state.errorCode}/>
+                </div>
+            )
+        }
+
         const {validateErrors, loading, thanks} = this.state;
         //если при валидации были ошибки, выводим их на страниу
         const err = validateErrors.length===0 ? null : <ValidateErrors errors={validateErrors}/>;
@@ -112,7 +128,7 @@ class ContactsPage extends Component{
                 <div className="row">
                     <div className="col-lg-4 offset-lg-4">
                         <div className="title">Tell us about your tastes</div>
-                        <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"/>    
+                        <img className="beanslogo" src="/logo/Beans_logo_dark.svg" alt="Beans logo"/>    
                     </div>
                         {content}    
                 </div>
@@ -130,7 +146,7 @@ const Thanks = ({onClick}) => {
             <img src="img/breakfast.png" alt="breakfast"/>
 
             <div className="d-flex justify-content-center ">
-                <button onClick={onClick} className="shop__filter-btn" >Another? <img src="/img/back-arr.svg" alt="."/></button>
+                <button onClick={onClick} className="shop__filter-btn another" >Another? <img src="/img/back-arr.svg" alt="."/></button>
             </div>
 
         </div>
@@ -163,7 +179,7 @@ const ContactForm = ({err, onValueChange, onClick}) => {
                 
             </form>
             <div className="d-flex justify-content-center">
-                <button onClick={onClick} className="shop__filter-btn" >Contact Us</button>
+                <button id='send' onClick={onClick} className="shop__filter-btn" >Sent us</button>
             </div>
         </div>
     )

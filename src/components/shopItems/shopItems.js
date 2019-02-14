@@ -20,6 +20,13 @@ class ShopItems extends Component {
         this.loadItems()
     }
 
+    componentDidCatch(){
+        this.setState({
+            error: true,
+            errorCode:"fatal"
+        })
+    }
+
     //получаем данные
     loadItems = async () => {
         this.setState({loading: true});
@@ -51,7 +58,6 @@ class ShopItems extends Component {
 
     //поиск поста по вводу данных.
     searchPost = (items,term)=>{
-        console.log(term);
         if(term.length === 0)
         return items;
 
